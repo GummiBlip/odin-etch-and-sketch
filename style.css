@@ -1,3 +1,10 @@
 body {
   background-color: blanchedalmond;
 }
+
+.gridBox {
+  border: solid red 1px;
+  width: 64px;
+  height: 64px;
+  display: block;
+}
