@@ -1,8 +1,16 @@
 body {
   background-color: blanchedalmond;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
-#container {
+.ui {
+  display: flex;
+  justify-content: center;
+}
+
+#gridContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
