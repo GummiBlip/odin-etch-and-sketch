@@ -2,6 +2,7 @@ body {
   background-color: blanchedalmond;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 16px;
 }
 
@@ -14,6 +15,9 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  border: solid black;
+  width: 960px;
+  height: 960px;
 }
 
 .rowContainer {
@@ -22,7 +26,5 @@ body {
 }
 
 .gridBox {
-  border: solid red 1px;
-  width: 64px;
-  height: 64px;
+  background-color: blue;
 }
