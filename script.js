@@ -19,11 +19,18 @@ function generateGrid(gridSize, containerSize) {
   }
 }
 
+function clearGrid() {
+  for (node of document.querySelectorAll(".rowContainer")) {
+    node.remove();
+  }
+}
+
 let container = document.querySelector("#gridContainer");
 let promptButton = document.querySelector("#sizeButton");
-let size = 64;
+let initialGridSize = 64;
+let canvasSize = 960;
 
-promptButton.addEventListener("click", generateGrid(getSize, 960));
+promptButton.addEventListener("click", () => { clearGrid(); generateGrid(getSize(), canvasSize); });
 
-generateGrid(size, 960);
+generateGrid(initialGridSize, canvasSize);
 
