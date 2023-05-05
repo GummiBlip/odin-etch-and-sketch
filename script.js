@@ -1,9 +1,10 @@
 function getSize() {
-  let size = prompt("Please enter a grid size");
+  let size = prompt("Please your desired number of squares per side of the canvas. It must be at least 1 and cannot be larger than 100.");
   return size;
 }
 
 function generateGrid(squareCount, containerSize) {
+  squareCount = validateSize(squareCount);
   for (i = 0; i < squareCount; i++) {
     let subContainer = document.createElement("div");
     subContainer.classList.add("rowContainer");
@@ -19,15 +20,11 @@ function generateGrid(squareCount, containerSize) {
   }
 }
 
-function validateSize() {
-  roundsToPlay = Math.floor(document.querySelector("#rounds").value);
-  if (!isNaN(roundsToPlay) && roundsToPlay >= 1 && roundsToPlay <= 99) {
-    return true;
-  } else {
-    updateInfo("Please enter a valid number of rounds.");
-    roundsToPlay = 5;
-    return false;
-  }
+function validateSize(sizeString) {
+  size = Math.floor(sizeString);
+  if (!isNaN(size) && size >= 1 && size <= 100) {
+    return size;
+  } return 64;
 }
 
 function clearGrid() {
