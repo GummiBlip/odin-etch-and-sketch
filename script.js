@@ -1,5 +1,5 @@
 function getSize() {
-  let size = prompt("Please your desired number of squares per side of the canvas. It must be at least 1 and cannot be larger than 100.");
+  let size = prompt("Please your desired number of squares per side of the canvas. It must be at least 1 and cannot be more than 100.");
   return size;
 }
 
