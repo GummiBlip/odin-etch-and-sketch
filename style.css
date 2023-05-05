@@ -21,7 +21,8 @@ body {
 }
 
 #sizeButton {
-  background-color: goldenrod;
+  background-color: gold;
+  border: solid goldenrod 2px;
 }
 
 .rowContainer {
